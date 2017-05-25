@@ -137,17 +137,6 @@ int main(int argc,char* argv[]) {
   }
 
 
-  // {
-  // //TFIn SIn("/lfs/madmax6/0/mohanas/snap-dev/examples/cascadegen/paperAuthAfflTable3.bin");
-  // TFIn SIn("paperAuthAfflTable3.bin");
-  // std::cout<<"Sin done";
-  // P = TTable::Load(SIn, &Context);
-  // Context.Load(SIn);
-  // }
-  // std::cout<<"Table loaded "<<currentDateTime()<<std::endl;
-  //TVec<TPair<TStr, TAttrType> > S = P->GetSchema();
-  //PNGraph Graph = TSnap::ToGraph<PNGraph>(P, S[1].GetVal1(), S[2].GetVal1(), aaFirst);
-
   //Add modes
   TStrV NodeAttrV;
   PMMNet Graph = TMMNet::New();

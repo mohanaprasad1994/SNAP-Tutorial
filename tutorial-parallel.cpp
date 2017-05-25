@@ -171,18 +171,18 @@ int main(int argc,char* argv[]) {
   crossnetids.Add(Graph->GetCrossId("Prereqs"));
   crossnetids.Add(Graph->GetCrossId("Instructors"));
 
-  TIntStrStrTrV nodeattrmapping;
-  TIntStrStrTrV edgeattrmapping;
-  PNEANet pneanet = Graph->ToNetwork(crossnetids, nodeattrmapping, edgeattrmapping);
+  // TIntStrStrTrV nodeattrmapping;
+  // TIntStrStrTrV edgeattrmapping;
+  // PNEANet pneanet = Graph->ToNetwork(crossnetids, nodeattrmapping, edgeattrmapping);
   
-  // TStrV crossnetnames;
-  // crossnetnames.Add("Friends");
-  // crossnetnames.Add("Enrollments");
-  // crossnetnames.Add("Advisors");
-  // crossnetnames.Add("Prereqs");
-  // crossnetnames.Add("Instructors");
+  TStrV crossnetnames;
+  crossnetnames.Add("Friends");
+  crossnetnames.Add("Enrollments");
+  crossnetnames.Add("Advisors");
+  crossnetnames.Add("Prereqs");
+  crossnetnames.Add("Instructors");
 
-  // PNEANetMP pneanet = Graph->ToNetworkMP(crossnetnames);
+  PNEANetMP pneanet = Graph->ToNetworkMP(crossnetnames);
   std::cout<<"Done converting to TNEANet"<<"\n";
 
   std::cout<<"Number of nodes: "<< pneanet->GetNodes()<<", Number of edges: "<<pneanet->GetEdges()<<std::endl;
